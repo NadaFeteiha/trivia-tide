@@ -9,9 +9,6 @@ function Navbar() {
                     <Link to="/" className={styles.navLink}>Home</Link>
                 </li>
                 <li>
-                    <Link to="/quiz" className={styles.navLink}>Quiz</Link>
-                </li>
-                <li>
                     <Link to="/about" className={styles.navLink}>About</Link>
                 </li>
             </ul>
