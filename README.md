@@ -1,12 +1,36 @@
-# React + Vite
+# Trivia Tide
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Trivia Tide is a fun and engaging trivia game application that allows users to test their knowledge across various categories. The application fetches trivia questions from an external API and presents them to the users in a user-friendly interface.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Multiple categories of trivia questions
+- Different difficulty levels
+- Score tracking
+- User-friendly interface
 
-## Expanding the ESLint configuration
+## API Usage
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Trivia Tide uses the [Open Trivia Database API](https://opentdb.com/api_config.php) to fetch trivia questions.
+
+## Project Structure
+
+The project structure is organized as follows:
+
+```
+trivia-tide/
+├── src/
+│   ├── components/
+│   │   ├── Header.js
+│   │   ├── Question.js
+│   │   └── Score.js
+│   ├── services/
+│   │   └── api.js
+│   ├── App.js
+│   ├── index.js
+│   └── styles.css
+├── public/
+│   └── index.html
+├── package.json
+└── README.md
+```

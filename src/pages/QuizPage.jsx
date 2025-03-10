@@ -1,7 +1,6 @@
 import { useEffect, useState, useRef } from "react";
 import { useParams } from "react-router-dom";
 import MultipleChoiceQuestion from "../components/MultipleChoiceQuestion";
-import styles from '../styles/QuizPage.module.css';
 
 export default function QuizPage() {
   const { amount, category, difficulty, type } = useParams();
