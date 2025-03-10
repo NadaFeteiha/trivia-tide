@@ -2,6 +2,10 @@
 
 Trivia Tide is a fun and engaging trivia game application that allows users to test their knowledge across various categories. The application fetches trivia questions from an external API and presents them to the users in a user-friendly interface.
 
+## Try It Out
+
+You can try out Trivia Tide by visiting the following link: [Trivia Tide](https://trivia-tide.netlify.app/)
+
 ## Features
 
 - Multiple categories of trivia questions
