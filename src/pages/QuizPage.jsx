@@ -32,9 +32,11 @@ export default function QuizPage() {
   if (!questions || questions.length === 0) return <h1>Loading...</h1>;
 
   return (
-    <main className={styles.container}>
-      <h1>Quiz Page</h1>
-      <h2>Your score= {score.current}</h2>
+    <main className="flex flex-col justify-center items-center mt-20 p-5 rounded-md w-full">
+
+      <h2 className="text-2xl font-extrabold mb-6 px-6 py-3 text-[#30386f] bg-[#c4f3e4] border border-[#2a735d] rounded-lg shadow-md self-start mr-10">
+        Your Score: <span className="text-[#2a735d]">{score.current}</span>
+      </h2>
 
       <MultipleChoiceQuestion
         index={currentQuestion}

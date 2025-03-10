@@ -40,15 +40,15 @@ function MultipleChoiceQuestion({ index, question, choices, correctAnswer, score
         }
 
         if (choice === selectedAnswer) {
-            return "bg-blue-700 text-white border-blue-700";
+            return "bg-[#b4bace] text-white border-[#b4bace]";
         }
 
-        return "hover:bg-amber-400 hover:text-white border-gray-300";
+        return "hover:bg-[#fcd447] hover:text-white border-gray-300";
     };
 
     return (
-        <div className="bg-white shadow-lg rounded-lg p-6 w-full max-w-md mx-auto">
-            <h2 className="text-lg font-semibold mb-4 text-gray-800">{index + 1}.{question}</h2>
+        <div className="bg-white shadow-lg rounded-lg p-6 w-full max-w-md mx-auto ">
+            <h2 className="text-lg font-semibold mb-4 text-[#30386f]">{index + 1}. {question}</h2>
             <div className="flex flex-col space-y-2">
                 {choices.map((choice, index) => (
                     <button
@@ -63,7 +63,7 @@ function MultipleChoiceQuestion({ index, question, choices, correctAnswer, score
             </div>
 
             <button
-                className="w-full bg-blue-500 text-white p-3 rounded-lg mt-4 disabled:bg-gray-400"
+                className="w-full bg-[#30386f] text-white p-3 rounded-lg mt-4 disabled:bg-gray-400"
                 onClick={isSubmitted ? handleNext : handleSubmit}
                 disabled={!selectedAnswer && !isSubmitted}
             >
