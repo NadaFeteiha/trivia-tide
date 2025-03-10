@@ -16,12 +16,11 @@ Experience Trivia Tide firsthand by visiting the live site: [Trivia Tide](https:
 ## Technologies Used
 
 Trivia Tide is built with the following technologies:
-
-- **React**: A JavaScript library for building dynamic and responsive user interfaces.
-- **Fetch API**: A modern browser API used to make HTTP requests to retrieve trivia questions from the external API.
-- **CSS**: Cascading Style Sheets for styling the application and ensuring a visually appealing design.
-- **Tailwind CSS**: A utility-first CSS framework for rapidly building custom user interfaces.
-- **React Icons**: A library for including popular icons in your React projects easily.
+- **React**: A JavaScript library for building dynamic and responsive user interfaces. [React Documentation](https://reactjs.org/docs/getting-started.html)
+- **Fetch API**: A modern browser API used to make HTTP requests to retrieve trivia questions from the external API. [Fetch API Documentation](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API)
+- **CSS**: Cascading Style Sheets for styling the application and ensuring a visually appealing design. [CSS Documentation](https://developer.mozilla.org/en-US/docs/Web/CSS)
+- **Tailwind CSS**: A utility-first CSS framework for rapidly building custom user interfaces. [Tailwind CSS Documentation](https://tailwindcss.com/docs)
+- **React Icons**: A library for including popular icons in your React projects easily. [React Icons Documentation](https://react-icons.github.io/react-icons/)
 
 ## Approach Taken
 
