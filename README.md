@@ -16,11 +16,12 @@ Experience Trivia Tide firsthand by visiting the live site: [Trivia Tide](https:
 ## Technologies Used
 
 Trivia Tide is built with the following technologies:
-- **React**: A JavaScript library for building dynamic and responsive user interfaces. [React Documentation](https://reactjs.org/docs/getting-started.html)
-- **Fetch API**: A modern browser API used to make HTTP requests to retrieve trivia questions from the external API. [Fetch API Documentation](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API)
-- **CSS**: Cascading Style Sheets for styling the application and ensuring a visually appealing design. [CSS Documentation](https://developer.mozilla.org/en-US/docs/Web/CSS)
-- **Tailwind CSS**: A utility-first CSS framework for rapidly building custom user interfaces. [Tailwind CSS Documentation](https://tailwindcss.com/docs)
-- **React Icons**: A library for including popular icons in your React projects easily. [React Icons Documentation](https://react-icons.github.io/react-icons/)
+
+- **[React](https://reactjs.org/docs/getting-started.html)**: A JavaScript library for building dynamic and responsive user interfaces.
+- **[Fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API)**: A modern browser API used to make HTTP requests to retrieve trivia questions from the external API.
+- **[CSS](https://developer.mozilla.org/en-US/docs/Web/CSS)**: Cascading Style Sheets for styling the application and ensuring a visually appealing design.
+- **[Tailwind CSS ](https://tailwindcss.com/docs)**: A utility-first CSS framework for rapidly building custom user interfaces.
+- **[React Icons](https://react-icons.github.io/react-icons/)**: A library for including popular icons in your React projects easily.
 
 ## Approach Taken
 
@@ -49,7 +50,6 @@ You can access the live version of Trivia Tide here: [Trivia Tide](https://trivi
 - **True/false questions**: True and false quiz not supported yet
 - **Timer**: add a time for each question.
 
-
 ## API Usage
 
 Trivia Tide integrates with the [Open Trivia Database API](https://opentdb.com/api_config.php), a free and open-source API providing a wide range of trivia questions across multiple categories and difficulty levels.
@@ -57,6 +57,7 @@ Trivia Tide integrates with the [Open Trivia Database API](https://opentdb.com/a
 ## Project Structure
 
 The project is organized as follows for clarity and maintainability:
+
 ```
 trivia-tide/
 ├── src/
@@ -75,4 +76,3 @@ trivia-tide/
 ├── package.json            # Project dependencies and scripts
 └── README.md               # Project documentation
 ```
-
