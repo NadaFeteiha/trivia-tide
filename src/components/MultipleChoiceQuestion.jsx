@@ -1,6 +1,8 @@
 import { useState } from 'react';
 
-function MultipleChoiceQuestion({ index, question, choices, correctAnswer, score, setCurrentQuestion, isLastQuestion }) {
+function MultipleChoiceQuestion({
+    question, choices, correctAnswer, onAnswerSelected, onNextQuestion, isLastQuestion
+}) {
     const [selectedAnswer, setSelectedAnswer] = useState(null);
     const [isSubmitted, setIsSubmitted] = useState(false);
 
@@ -13,46 +15,39 @@ function MultipleChoiceQuestion({ index, question, choices, correctAnswer, score
     const handleSubmit = () => {
         if (selectedAnswer) {
             setIsSubmitted(true);
-            if (selectedAnswer === correctAnswer) {
-                score.current += 1;
-            }
+            onAnswerSelected(selectedAnswer === correctAnswer);
         }
     };
 
     const handleNext = () => {
         setIsSubmitted(false);
         setSelectedAnswer(null);
-
-        if (!isLastQuestion) {
-            setCurrentQuestion((prev) => prev + 1);
-        }
+        onNextQuestion();
     };
 
     const getChoiceButtonClasses = (choice) => {
-        if (isSubmitted) {
-            if (choice === correctAnswer) {
-                return "bg-green-500 text-white border-green-500";
-            }
-            if (choice === selectedAnswer) {
-                return "bg-red-500 text-white border-red-500";
-            }
-            return "bg-white border-gray-300";
+        if (!isSubmitted) {
+            return choice === selectedAnswer
+                ? 'bg-indigo-600 text-white border-indigo-600'
+                : 'hover:bg-indigo-100 border-gray-300';
         }
 
-        if (choice === selectedAnswer) {
-            return "bg-[#b4bace] text-white border-[#b4bace]";
+        if (choice === correctAnswer) {
+            return 'bg-green-500 text-white border-green-500';
         }
-
-        return "hover:bg-[#fcd447] hover:text-white border-gray-300";
+        if (choice === selectedAnswer && choice !== correctAnswer) {
+            return 'bg-red-500 text-white border-red-500';
+        }
+        return 'bg-white border-gray-300';
     };
 
     return (
-        <div className="bg-white shadow-lg rounded-lg p-6 w-full max-w-md mx-auto ">
-            <h2 className="text-lg font-semibold mb-4 text-[#30386f]">{index + 1}. {question}</h2>
-            <div className="flex flex-col space-y-2">
-                {choices.map((choice, index) => (
+        <div className="bg-white shadow-lg rounded-lg p-6 w-full max-w-md mx-auto">
+            <h2 className="text-lg font-semibold mb-4 text-gray-800">{question}</h2>
+            <div className="flex flex-col space-y-2 mb-4">
+                {choices.map((choice, idx) => (
                     <button
-                        key={index}
+                        key={idx}
                         className={`w-full text-left p-3 border rounded-lg transition-all ${getChoiceButtonClasses(choice)}`}
                         onClick={() => handleAnswer(choice)}
                         disabled={isSubmitted}
@@ -63,14 +58,14 @@ function MultipleChoiceQuestion({ index, question, choices, correctAnswer, score
             </div>
 
             <button
-                className="w-full bg-[#30386f] text-white p-3 rounded-lg mt-4 disabled:bg-gray-400"
+                className="w-full bg-indigo-600 text-white p-3 rounded-lg hover:bg-indigo-700 transition disabled:bg-gray-400"
                 onClick={isSubmitted ? handleNext : handleSubmit}
                 disabled={!selectedAnswer && !isSubmitted}
             >
-                {isSubmitted ? (isLastQuestion ? "Finish" : "Next") : "Submit"}
+                {isSubmitted ? (isLastQuestion ? 'Finish Quiz' : 'Next Question') : 'Submit Answer'}
             </button>
         </div>
     );
-}
+};
 
 export default MultipleChoiceQuestion;

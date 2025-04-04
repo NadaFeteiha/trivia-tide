@@ -5,6 +5,7 @@ import Quiz from './pages/QuizPage'
 import bg from './assets/bg.webp'
 import { FaGamepad } from "react-icons/fa";
 import { MdOutlineQuiz } from "react-icons/md";
+import ResultsPage from './pages/ResultsPage'
 
 function App() {
 
@@ -26,6 +27,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/quiz/:amount/:category/:difficulty/:type" element={<Quiz />} />
+        <Route path="/results" element={<ResultsPage />} />
       </Routes>
 
     </div>
